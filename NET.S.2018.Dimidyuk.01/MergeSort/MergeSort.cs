@@ -18,7 +18,7 @@ namespace MergeSort
             {
                 throw new ArgumentException($"The total length of {nameof(array)} can't be 0");
             }
-            
+
             return Sort(array);
         }
 
