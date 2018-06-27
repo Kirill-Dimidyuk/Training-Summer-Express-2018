@@ -1,0 +1,6 @@
+D:\1Проги\C#\InclusionNumbers\InclusionNumbers\bin\Debug\InclusionNumbers.dll
+D:\1Проги\C#\InclusionNumbers\InclusionNumbers\bin\Debug\InclusionNumbers.pdb
+D:\1Проги\C#\InclusionNumbers\InclusionNumbers\obj\Debug\InclusionNumbers.csprojAssemblyReference.cache
+D:\1Проги\C#\InclusionNumbers\InclusionNumbers\obj\Debug\InclusionNumbers.csproj.CoreCompileInputs.cache
+D:\1Проги\C#\InclusionNumbers\InclusionNumbers\obj\Debug\InclusionNumbers.dll
+D:\1Проги\C#\InclusionNumbers\InclusionNumbers\obj\Debug\InclusionNumbers.pdb
