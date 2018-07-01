@@ -1,6 +1,0 @@
-D:\1Проги\C#\NET.S.2018.Dimidyuk.01\NET.S.2018.Dimidyuk.01\bin\Debug\NET.S.2018.Dimidyuk.01.dll
-D:\1Проги\C#\NET.S.2018.Dimidyuk.01\NET.S.2018.Dimidyuk.01\bin\Debug\NET.S.2018.Dimidyuk.01.pdb
-D:\1Проги\C#\NET.S.2018.Dimidyuk.01\NET.S.2018.Dimidyuk.01\obj\Debug\QuickSort.csprojAssemblyReference.cache
-D:\1Проги\C#\NET.S.2018.Dimidyuk.01\NET.S.2018.Dimidyuk.01\obj\Debug\QuickSort.csproj.CoreCompileInputs.cache
-D:\1Проги\C#\NET.S.2018.Dimidyuk.01\NET.S.2018.Dimidyuk.01\obj\Debug\NET.S.2018.Dimidyuk.01.dll
-D:\1Проги\C#\NET.S.2018.Dimidyuk.01\NET.S.2018.Dimidyuk.01\obj\Debug\NET.S.2018.Dimidyuk.01.pdb
