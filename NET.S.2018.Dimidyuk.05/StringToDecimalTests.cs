@@ -25,6 +25,8 @@ namespace StringToDecimal.Tests
 
         [TestCase("764241", 20)]
         [TestCase("1AeF101", -2)]
+	[TestCase("1AeF101", 2)]
+	[TestCase("SA123", 2)]
         public void StringToDecimal_InputInvalidValues_ThrowsArgumentException(string number, int scale)
         {
             Notation notation = new Notation(scale);
