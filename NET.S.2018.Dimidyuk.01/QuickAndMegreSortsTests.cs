@@ -1,6 +1,5 @@
 ﻿using System;
-using MergeSort;
-using QuickSort;
+using SortMethods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OuickAndMergeSort.Tests
@@ -13,22 +12,24 @@ namespace OuickAndMergeSort.Tests
         {
             int[] array = new int[] { 5, 8, 4, 6, 9, 7, 1, 3, 2 };
             int[] expected = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            int[] actual = array.TheMergeSort();
+            int[] actual = array.MergeSorting();
             CollectionAssert.AreEqual(actual, expected);
         }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void MergeSort_With_Throwing_ArgumentNullException()
         {
             int[] array = null;
-            int[] actual = array.TheMergeSort();
+            int[] actual = array.MergeSorting();
         }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void MergeSort_With_Throwing_ArgumentException()
         {
             int[] array = { };
-            int[] actual = array.TheMergeSort();
+            int[] actual = array.MergeSorting();
         }
     }
 
@@ -40,22 +41,24 @@ namespace OuickAndMergeSort.Tests
         {
             int[] array = new int[] { 5, 8, 4, 6, 9, 7, 1, 3, 2 };
             int[] expected = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            int[] actual = array.TheQuickSort();
+            int[] actual = array.QuickSorting();
             CollectionAssert.AreEqual(actual, expected);
         }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void QuickSort_With_Throwing_ArgumentNullException()
         {
             int[] array = null;
-            int[] actual = array.TheQuickSort();
+            int[] actual = array.QuickSorting();
         }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void QuickSort_With_Throwing_ArgumentException()
         {
             int[] array = { };
-            int[] actual = array.TheQuickSort();
+            int[] actual = array.QuickSorting();
         }
     }
 }
