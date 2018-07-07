@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using InclusionNumbers;
 
 namespace InclusionNumbers.Tests
@@ -7,69 +8,31 @@ namespace InclusionNumbers.Tests
     [TestClass]
     public class InclusionNumbersTest
     {
-
+        #region Insertion
         [TestMethod]
-        public void Inclusion_Numbers_Success()
+        [TestCase(8, 15, 0, 0, ExpectedResult = 9)]
+        [TestCase(15, 15, 0, 0, ExpectedResult = 15)]
+        [TestCase(8, 15, 3, 8, ExpectedResult = 120)]
+        public int Inclusion_Numbers_PositiveTest(int first, int second, int startPosition, int finishPosition)
         {
-            int first = 8;
-            int second = 15;
-            int startPosition = 0;
-            int finishPosition = 0;
+            return InclusionNumbers.Insertion(first, second, startPosition, finishPosition);
+        }
+        #endregion
 
-            int actual = InclusionNumbers.Insertion(first, second, startPosition, finishPosition);
-
-            Assert.AreEqual(actual, 9);
+        [TestCase(0, 15, -1, 30)]
+        [TestCase(0, 15, 1, 35)]
+        public void Insertion_InputInvalidValues_ThrowsArgumentOutOfRangeException(int first, int second, int startPosition, int finishPosition)
+        {
+            NUnit.Framework.Assert.Throws<ArgumentOutOfRangeException>(() => InclusionNumbers.Insertion(first, second, startPosition, finishPosition));
         }
 
-        [TestMethod]
-        public void Inclusion_Numbers_Unsuccess()
+        #region Exceptions
+        [TestCase(0, 15, 30, 3)]
+        public void Insertion_InputInvalidValues_ThrowsArgumentException(int first, int second, int startPosition, int finishPosition)
         {
-            int first = 0;
-            int second = 15;
-            int startPosition = 0;
-            int finishPosition = 30;
-
-            int actual = InclusionNumbers.Insertion(first, second, startPosition, finishPosition);
-
-            Assert.AreEqual(actual, 17); //15
+            NUnit.Framework.Assert.Throws<ArgumentException>(() => InclusionNumbers.Insertion(first, second, startPosition, finishPosition));
         }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void Inclusion_Numbers_ArgumentException()
-        {
-            int first = 0;
-            int second = 15;
-            int startPosition = 30;
-            int finishPosition = 3;
-
-            int actual = InclusionNumbers.Insertion(first, second, startPosition, finishPosition);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Inclusion_Numbers_ArgumentOutOfRangeException_Of_StartPosition()
-        {
-            int first = 0;
-            int second = 15;
-            int startPosition = -1;
-            int finishPosition = 30;
-
-            int actual = InclusionNumbers.Insertion(first, second, startPosition, finishPosition);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Inclusion_Numbers_ArgumentOutOfRangeException_Of_FinishPosition()
-        {
-            int first = 0;
-            int second = 15;
-            int startPosition = 1;
-            int finishPosition = 35;
-
-            int actual = InclusionNumbers.Insertion(first, second, startPosition, finishPosition);
-        }
-
+        #endregion
     }
 }
 
