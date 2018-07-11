@@ -12,6 +12,7 @@ namespace AdvancedCustomer.Tests
         [TestCase("3+", null, ExpectedResult = "Customer record: Name - Jeffrey Richter, Revenue - 1,000,000.00")]
         [TestCase("4+", null, ExpectedResult = "Customer record: Name - Jeffrey Richter")]
         [TestCase("5+", null, ExpectedResult = "Customer record: Revenue - 1000000")]
+        [TestCase("6+", null, ExpectedResult = "Customer record: Revenue - one zero zero zero zero zero zero")]
         public string ToString_AdvancedCustomerFormats_PositiveTest(string format, IFormatProvider formatProvider)
         {
             AdvancedCustomer ce = new AdvancedCustomer();

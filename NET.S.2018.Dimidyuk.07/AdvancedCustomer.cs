@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Text;
 
 namespace AdvancedCustomer
 {
@@ -7,6 +8,8 @@ namespace AdvancedCustomer
     {
         #region private fields
         private readonly IFormatProvider parentFormatProvider;
+
+        private readonly string[] _numberWords = "zero one two three four five six seven eight nine minus point".Split();
         #endregion
 
         #region ctors
@@ -73,9 +76,25 @@ namespace AdvancedCustomer
                     return $"Customer record: Name - {customer.Name}";
                 case "5+":
                     return $"Customer record: Revenue - {customer.Revenue}";
+                case "6+":
+                    return $"Customer record: Revenue - {NumberIntoWords((double)customer.Revenue)}";
                 default:
                     throw new FormatException($"This format {format} is not supported.");
             }
+        }
+
+        public string NumberIntoWords(double number)
+        {
+            StringBuilder result = new StringBuilder();
+            string digitList = number.ToString();
+            foreach (char digit in digitList)
+            {
+                int i = "0123456789+-.".IndexOf(digit);
+                if (i == -1) continue;
+                if (result.Length > 0) result.Append(' ');
+                result.Append(_numberWords[i]);
+            }
+            return result.ToString();
         }
     }
 }
