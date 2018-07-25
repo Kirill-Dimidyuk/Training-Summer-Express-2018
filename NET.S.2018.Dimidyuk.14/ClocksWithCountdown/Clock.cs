@@ -58,6 +58,7 @@ namespace ClockLibrary
     }
     #endregion
 
+    #region MessageEventArgs
     public class MessageEventArgs
     {
         /// <summary>
@@ -82,7 +83,9 @@ namespace ClockLibrary
             this.message = message;
         }
     }
-
+    #endregion
+    
+    #region Subscriber
     /// <summary>
     /// Class of Subscribers
     /// </summary>
@@ -103,4 +106,5 @@ namespace ClockLibrary
             Clock.EventStarted(sender, e);
         }
     }
+    #endregion
 }
